@@ -1,7 +1,7 @@
 import unittest
 import ex_01
 
-class TestFailedEX1(unittest.TestCase):
+class TestEX1(unittest.TestCase):
     def setUp(self):
         pass
 
@@ -10,6 +10,9 @@ class TestFailedEX1(unittest.TestCase):
 
     def test_2(self):
         self.assertEqual(ex_01.select('(esdf)(esdf'), '(esdf)')
+
+    def test_3(self):
+        self.assertEqual(ex_01.select('esdfd((esdf)(esdf))'), 'esdfd((esdf)(esdf))')
 
 
 if __name__ == '__main__':
